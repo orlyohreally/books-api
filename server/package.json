@@ -1,0 +1,26 @@
+{
+  "name": "server-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run transpile",
+    "server": "node ./dist-server/main.js",
+    "dev": "npm run build && npm run server",
+    "transpile": "babel ./src --out-dir dist-server",
+    "clean": "rimraf dist-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
